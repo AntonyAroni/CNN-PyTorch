@@ -1,0 +1,11 @@
+# Dependencias para CNN BLOODMNIST
+torch
+torchvision
+medmnist
+numpy
+matplotlib
+seaborn
+scikit-learn
+tqdm
+Pillow
+pandas
