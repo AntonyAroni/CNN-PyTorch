@@ -4,10 +4,10 @@ source .venv/bin/activate
 
 python main.py --mode evaluate --model-path ./checkpoints/trained_model_xxxx.pth
 
-python main.py --mode both --epochs 10 --batch-size 32 --visualize-data
-python main.py --mode evaluate --visualize-data
+python main.py --mode both --epochs 15 --batch-size 32 --visualize-data
 
-python main.py --mode evaluate --visualize-data --model-path ./checkpoints/best_model_20250615_162551.pth
+python main.py --mode evaluate --visualize-data --model-path ./checkpoints/best_model_best_model_num.pth
+python main.py --mode evaluate --model-path ./checkpoints/best_model_20250619_192734.pth
 
 
 """

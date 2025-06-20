@@ -15,8 +15,9 @@ class BloodMNISTDataManager:
     def __init__(self, batch_size=64, num_workers=2):
         self.batch_size = batch_size
         self.num_workers = num_workers
-        self.class_names = ['basophil', 'eosinophil', 'erythroblast', 'ig',
-                            'lymphocyte', 'monocyte', 'neutrophil', 'platelet']
+        # self.class_names = ['basophil', 'eosinophil', 'erythroblast', 'ig',
+        #                     'lymphocyte', 'monocyte', 'neutrophil', 'platelet']
+        self.class_names = ['akiec', 'bcc', 'bkl', 'df', 'nv', 'vasc', 'mel']
 
         # Transformaciones
         self.transform = transforms.Compose([
@@ -40,7 +41,7 @@ class BloodMNISTDataManager:
         """Carga el dataset BLOODMNIST"""
         print(f"Cargando dataset BLOODMNIST...")
 
-        # Cargar datasets
+        #Cargar datasets BLOODMNIST
         self.train_dataset = medmnist.BloodMNIST(split='train', transform=self.transform, download=download)
         self.val_dataset = medmnist.BloodMNIST(split='val', transform=self.transform, download=download)
         self.test_dataset = medmnist.BloodMNIST(split='test', transform=self.transform, download=download)
